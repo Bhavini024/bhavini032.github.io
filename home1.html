@@ -1,0 +1,1579 @@
+<html>
+    <style>
+        body{
+background-image:url('folder/room.jpg');
+background-size:100%;
+background-repeat:no-repeat;
+        }
+        .divtheme{
+            width:100%;
+            height: 100%;
+background-color:rgba(255,255,255,0.2);
+background-size:100%;
+background-repeat:no-repeat;
+box-shadow: 12px  10px  15px  black;
+border:inset ;
+        }
+        .tabtheme{
+           
+            box-shadow: 12px  10px  15px  black;
+            height: 50px;
+        }
+        .tdtheme{
+            font-family:arial;
+            font-size:25px;
+            text-transform: uppercase;
+            color:white;
+        }
+             
+              
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          
+            margin-left: 140px;
+        }
+        .h2 {
+            color: black;
+            font-size: 40px;
+           
+        }
+
+        .h3 {
+            color: black;
+            font-size: 25px;
+           
+        }
+  .p {
+            color: black;
+            font-size: 20px;
+           
+        }
+
+        .options {
+            margin-top: 30px;
+        }
+
+        .options a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: black;
+            background-color: buttonshadow;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .options a:hover {
+            background-color: blanchedalmond;
+        }
+        .contain {
+            
+            width: cover;
+            height: 100vh;
+            background-image: url('folder/room.jpg'); 
+            margin-left: -30px;
+            background-size: 101%;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+        }
+         .ward-table {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            overflow: auto; 
+            max-height: 450px;
+        }
+        .ward-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .ward-table th, .ward-table td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd; /*gray ka light version*/
+            text-align: left;
+        }
+        .ward-table th {
+            background-color: #f2f2f2;
+            /*gray ka light version*/
+        }
+        .ward-table a {
+            text-decoration: none;
+            color: #007bff; /*ajeeb blue*/
+        }
+        .ward-table a:hover {
+            text-decoration: underline;
+        }
+        
+        
+    .menu-container {
+      position: relative;
+      width: 100px;
+      margin: 20px;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    input[type="checkbox"] + label {
+      cursor: pointer;
+      display: block;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      border-radius: 5px;
+      margin-bottom: 5px;
+    }
+
+    input[type="checkbox"] + label + .dropdown {
+      display: none;
+    }
+
+    input[type="checkbox"]:checked + label + .dropdown {
+      display: block;
+    }
+
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0; /* Changed from right: -150px; */
+      background-color: #333;
+      width: 100px;
+      padding: 10px;
+      border-radius: 5px;
+      color: #fff;
+    }
+
+    .dropdown a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 5px;
+    }
+    
+    
+        /* Information Boxes */
+        #about-info,
+        #contact-info,
+        #enquiry-info {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height:800px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px 0 0 10px;
+            box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5);
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s, opacity 0.5s linear;
+        }
+
+        #about-info:target,
+        #contact-info:target,
+        #enquiry-info:target {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            color: #fff;
+            font-size: 20px;
+            text-decoration: none;
+        }
+.text {
+            font-size: 20px; /* Increase the font size as needed */
+        }
+    </style>
+    <body>
+        
+        
+        <div class="divtheme">
+            
+<div class="menu-container">
+  <input type="checkbox" id="menu-btn" name="menu">
+  <label for="menu-btn">&#9776; </label>
+  <div class="dropdown">
+    <ul>
+                <li><a href="#about-info">About Us</a></li>
+                <li><a href="#contact-info">Contact</a></li>
+                <li><a href="#enquiry-info">Enquiry</a></li>
+            </ul>
+  </div>
+</div>
+            <div id="about-info">
+        <a href="#" class="close-btn">&times;</a>
+        <h3>About Us</h3>
+        <p class="text">At Stay Hub, we're dedicated to providing the perfect homes for families, men, and women alike. Our mission is to redefine the rental experience by offering a seamless journey from finding the ideal living space to making it your own.We envision a world where everyone has access to a comfortable and safe home, tailored to their unique needs and preferences. Whether you're a family seeking a cozy space to grow together, a man searching for a place to call your own, or a woman looking for independence and security, Stay Hub is here to help.</p>
+    </div>
+
+    <div id="contact-info">
+        <a href="#" class="close-btn">&times;</a>
+        <h3>Contact</h3>
+        <p>Reach out to us:<br>
+    Get your questions answered about Stayhub
+    <br>
+    <br>
+    &#9990 Call: +918585858588
+    <br>
+    &#128231 Mail-Id: support@stayhub.com</p>
+    </div>
+
+    <div id="enquiry-info">
+        <a href="#" class="close-btn">&times;</a>
+        <h3>Enquiry</h3>
+        <p>Enquire Here, </p>
+    </div>
+
+             <div class="container">
+        <h2 class="h2">Welcome to Stay Hub,</h2>
+        <h3 class="h3">From Renting to Owning, Stay Hub is Your Key to Unlocking the Perfect Home Experience.</h3>
+        <p class="p">Find your perfect  rental  home in Indore with Stay Hub!</p>
+        
+        <div class="options">
+            <a href="#family">Family</a>
+            <a href="#men">Men</a>
+            <a href="#women">Women</a>
+        </div>
+            
+        
+        </div>
+        
+        </div>
+         <div class="contain" id="family">
+        <h4 style="margin-top: -50px; font-size: 30px;">Welcome Family!</h4>
+        <div class="ward-table">
+            <h2>Wards of Indore Municipal Corporation</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ward Number</th>
+                        <th>Ward Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="ward1.jsp">Ward 1</a></td>
+                        <td>Sirpur</td>
+                    </tr>
+                    <tr>
+                        <td><a href="ward2.jsp">Ward 2</a></td>
+                        <td>Chandan Nagar</td>
+                    </tr>
+                     <tr>
+                        <td><a href="ward3.jsp">Ward 3</a></td>
+                        <td>Kalani Nagar</td>
+                    </tr>
+                   <tr>
+                        <td><a href="ward4.jsp">Ward 4</a></td>
+                        <td>Sukhdev Nagar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="ward5.jsp">Ward 5</a></td>
+                        <td>Raj Nagar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="ward6.jsp">Ward 6</a></td>
+                        <td>Malharganj</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="ward7.jsp">Ward 7</a></td>
+                        <td>Janta Colony</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="ward8.jsp">Ward 8</a></td>
+                        <td>Juna Risala</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="ward9.jsp">Ward 9</a></td>
+                        <td>Vrindavan</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="ward10.jsp">Ward 10</a></td>
+                        <td>Banganga</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="ward11.jsp">Ward 11</a></td>
+                        <td>Bhagirath Pura</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="ward12.jsp">Ward 12</a></td>
+                        <td>Govind Colony</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="ward13.jsp">Ward 13</a></td>
+                        <td>Sangam Nagar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="ward14.jsp">Ward 14</a></td>
+                        <td>Ashok Nagar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="ward15.jsp">Ward 15</a></td>
+                        <td>Bijasan</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="ward16.jsp">Ward 16</a></td>
+                        <td>Nandbagh</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="ward17.jsp">Ward 17</a></td>
+                        <td>Kushwah Nagar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="ward18.jsp">Ward 18</a></td>
+                        <td>Sant Kabir</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="ward19.jsp">Ward 19</a></td>
+                        <td>Vishwa Karma</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="ward20.jsp">Ward 20</a></td>
+                        <td>Gauri Nagar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="ward21.jsp">Ward 21</a></td>
+                        <td>Shyam Nagar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="ward22.jsp">Ward 22</a></td>
+                        <td>Pt. Deendayal Upadhyay</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="ward23.jsp">Ward 23</a></td>
+                        <td>Lt. Rajesh Joshi</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="ward24.jsp">Ward 24</a></td>
+                        <td>Baliji Nath Maharaj</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="ward25.jsp">Ward 25</a></td>
+                        <td>S-Nanda Nagar</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward26.jsp">Ward 26</a></td>
+                        <td>Geen Mata</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward27.jsp">Ward 27</a></td>
+                        <td>Pashupatinath</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward28.jsp">Ward 28</a></td>
+                        <td>Maa Tujla Bhawani</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward29.jsp">Ward 29</a></td>
+                        <td>Dr. Shyama Prasad Mukharji</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward30.jsp">Ward 30</a></td>
+                        <td>Sant Ravidas</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward31.jsp">Ward 31</a></td>
+                        <td>Maharaj Chhatrasal</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward32.jsp">Ward 32</a></td>
+                        <td>Atal Bihari Bajpai</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward33.jsp">Ward 33</a></td>
+                        <td>Sukhliya</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward34.jsp">Ward 34</a></td>
+                        <td>Shaheed Bhagat Singh</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward35.jsp">Ward 35</a></td>
+                        <td>Lasudiya Mori</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward36.jsp">Ward 36</a></td>
+                        <td>Nipaniya</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward37.jsp">Ward 37</a></td>
+                        <td>Sai krupa</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward38.jsp">Ward 38</a></td>
+                        <td>Haji Colony</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward39.jsp">Ward 39</a></td>
+                        <td>Nahar Shah Wali</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward40.jsp">Ward 40</a></td>
+                        <td>Khajarana Ganesh</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward41.jsp">Ward 41</a></td>
+                        <td>Kailash Puri</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward42.jsp">Ward 42</a></td>
+                        <td>Swami Vivekanand</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward43.jsp">Ward 43</a></td>
+                        <td>Srinagar</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward44.jsp">Ward 44</a></td>
+                        <td>Hig</td>
+                    </tr>
+                  
+                    <tr>
+                        <td><a href="ward45.jsp">Ward 45</a></td>
+                        <td>Dr. BR Ambedkar</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward46.jsp">Ward 46</a></td>
+                        <td>Somnath</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward47.jsp">Ward 47</a></td>
+                        <td>Sardar Vallabh Bhai</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward48.jsp">Ward 48</a></td>
+                        <td>Geeta Bhawan</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward49.jsp">Ward 49</a></td>
+                        <td>Tilak Nagar</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward50.jsp">Ward 50</a></td>
+                        <td>Brajeshwari</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward51.jsp">Ward 51</a></td>
+                        <td>Bhagwati Nagar</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward52.jsp">Ward 52</a></td>
+                        <td>Musakhedi</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward53.jsp">Ward 53</a></td>
+                        <td>Dr. Molana Azad Nagar</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward54.jsp">Ward 54</a></td>
+                        <td>Residency</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward55.jsp">Ward 55</a></td>
+                        <td>South Tukoganj</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward56.jsp">Ward 56</a></td>
+                        <td>Snehlata Ganj</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward57.jsp">Ward 57</a></td>
+                        <td>Devi Ahilyabai</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward58.jsp">Ward 58</a></td>
+                        <td>Netaji Subhash Chandra Bose</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward59.jsp">Ward 59</a></td>
+                        <td>Harsiddhi</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward60.jsp">Ward 60</a></td>
+                        <td>Ranipura</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward61.jsp">Ward 61</a></td>
+                        <td>Tatya Sarvate</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward62.jsp">Ward 62</a></td>
+                        <td>Raoji Bazaar</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward63.jsp">Ward 63</a></td>
+                        <td>Navlakha</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward64.jsp">Ward 64</a></td>
+                        <td>Chitawad</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward65.jsp">Ward 65</a></td>
+                        <td>Sant Kawar Ram</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="ward66.jsp">Ward 66</a></td>
+                        <td>Shaheed Hemu Kalani</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="ward67.jsp">Ward 67</a></td>
+                        <td>Maharaja Holkar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="ward68.jsp">Ward 68</a></td>
+                        <td>Bambai Bazaar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="ward69.jsp">Ward 69</a></td>
+                        <td>Jawahar Marg</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="ward70.jsp">Ward 70</a></td>
+                        <td>Loknayak Nagar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="ward71.jsp">Ward 71</a></td>
+                        <td>Dravid Nagar</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward72.jsp">Ward 72</a></td>
+                        <td>Lokmanya Nagar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="ward73.jsp">Ward 73</a></td>
+                        <td>Laxman Singh Chouhan</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="ward74.jsp">Ward 74</a></td>
+                        <td>Vishnupuri</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward75.jsp">Ward 75</a></td>
+                        <td>Palda</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward76.jsp">Ward 76</a></td>
+                        <td>Bicholi</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="ward77.jsp">Ward 77</a></td>
+                        <td>Bilawali</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward78.jsp">Ward 78</a></td>
+                        <td>Choithram</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward79.jsp">Ward 79</a></td>
+                        <td>Sukh Niwas 1</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward80.jsp">Ward 80</a></td>
+                        <td>Sukh Niwas 2</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward81.jsp">Ward 81</a></td>
+                        <td>Annapurna</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward82.jsp">Ward 82</a></td>
+                        <td>Sudama Nagar</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward83.jsp">Ward 83</a></td>
+                        <td>Gumasta Nagar</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward84.jsp">Ward 84</a></td>
+                        <td>Dwarkapuri</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="ward85.jsp">Ward 85</a></td>
+                        <td>Prajapat Nagar</td>
+                    </tr>
+                    
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+        
+         <div class="contain" id="men">
+        <h4 style="margin-top: -50px; font-size: 30px;">Welcome Men!</h4>
+        <div class="ward-table">
+            <h2>Wards of Indore Municipal Corporation</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ward Number</th>
+                        <th>Ward Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="Mward1.jsp">Ward 1</a></td>
+                        <td>Sirpur</td>
+                    </tr>
+                    <tr>
+                        <td><a href="Mward2.jsp">Ward 2</a></td>
+                        <td>Chandan Nagar</td>
+                    </tr>
+                     <tr>
+                        <td><a href="Mward3.jsp">Ward 3</a></td>
+                        <td>Kalani Nagar</td>
+                    </tr>
+                   <tr>
+                        <td><a href="Mward4.jsp">Ward 4</a></td>
+                        <td>Sukhdev Nagar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Mward5.jsp">Ward 5</a></td>
+                        <td>Raj Nagar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Mward6.jsp">Ward 6</a></td>
+                        <td>Malharganj</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Mward7.jsp">Ward 7</a></td>
+                        <td>Janta Colony</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Mward8.jsp">Ward 8</a></td>
+                        <td>Juna Risala</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Mward9.jsp">Ward 9</a></td>
+                        <td>Vrindavan</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Mward10.jsp">Ward 10</a></td>
+                        <td>Banganga</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Mward11.jsp">Ward 11</a></td>
+                        <td>Bhagirath Pura</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Mward12.jsp">Ward 12</a></td>
+                        <td>Govind Colony</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Mward13.jsp">Ward 13</a></td>
+                        <td>Sangam Nagar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Mward14.jsp">Ward 14</a></td>
+                        <td>Ashok Nagar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Mward15.jsp">Ward 15</a></td>
+                        <td>Bijasan</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Mward16.jsp">Ward 16</a></td>
+                        <td>Nandbagh</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Mward17.jsp">Ward 17</a></td>
+                        <td>Kushwah Nagar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Mward18.jsp">Ward 18</a></td>
+                        <td>Sant Kabir</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Mward19.jsp">Ward 19</a></td>
+                        <td>Vishwa Karma</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Mward20.jsp">Ward 20</a></td>
+                        <td>Gauri Nagar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Mward21.jsp">Ward 21</a></td>
+                        <td>Shyam Nagar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Mward22.jsp">Ward 22</a></td>
+                        <td>Pt. Deendayal Upadhyay</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Mward23.jsp">Ward 23</a></td>
+                        <td>Lt. Rajesh Joshi</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Mward24.jsp">Ward 24</a></td>
+                        <td>Baliji Nath Maharaj</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Mward25.jsp">Ward 25</a></td>
+                        <td>S-Nanda Nagar</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward26.jsp">Ward 26</a></td>
+                        <td>Geen Mata</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward27.jsp">Ward 27</a></td>
+                        <td>Pashupatinath</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward28.jsp">Ward 28</a></td>
+                        <td>Maa Tujla Bhawani</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward29.jsp">Ward 29</a></td>
+                        <td>Dr. Shyama Prasad Mukharji</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward30.jsp">Ward 30</a></td>
+                        <td>Sant Ravidas</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward31.jsp">Ward 31</a></td>
+                        <td>Maharaj Chhatrasal</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward32.jsp">Ward 32</a></td>
+                        <td>Atal Bihari Bajpai</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward33.jsp">Ward 33</a></td>
+                        <td>Sukhliya</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward34.jsp">Ward 34</a></td>
+                        <td>Shaheed Bhagat Singh</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward35.jsp">Ward 35</a></td>
+                        <td>Lasudiya Mori</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward36.jsp">Ward 36</a></td>
+                        <td>Nipaniya</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward37.jsp">Ward 37</a></td>
+                        <td>Sai krupa</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward38.jsp">Ward 38</a></td>
+                        <td>Haji Colony</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward39.jsp">Ward 39</a></td>
+                        <td>Nahar Shah Wali</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward40.jsp">Ward 40</a></td>
+                        <td>Khajarana Ganesh</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward41.jsp">Ward 41</a></td>
+                        <td>Kailash Puri</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward42.jsp">Ward 42</a></td>
+                        <td>Swami Vivekanand</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward43.jsp">Ward 43</a></td>
+                        <td>Srinagar</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward44.jsp">Ward 44</a></td>
+                        <td>Hig</td>
+                    </tr>
+                  
+                    <tr>
+                        <td><a href="Mward45.jsp">Ward 45</a></td>
+                        <td>Dr. BR Ambedkar</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward46.jsp">Ward 46</a></td>
+                        <td>Somnath</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward47.jsp">Ward 47</a></td>
+                        <td>Sardar Vallabh Bhai</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward48.jsp">Ward 48</a></td>
+                        <td>Geeta Bhawan</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward49.jsp">Ward 49</a></td>
+                        <td>Tilak Nagar</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward50.jsp">Ward 50</a></td>
+                        <td>Brajeshwari</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward51.jsp">Ward 51</a></td>
+                        <td>Bhagwati Nagar</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward52.jsp">Ward 52</a></td>
+                        <td>Musakhedi</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward53.jsp">Ward 53</a></td>
+                        <td>Dr. Molana Azad Nagar</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward54.jsp">Ward 54</a></td>
+                        <td>Residency</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward55.jsp">Ward 55</a></td>
+                        <td>South Tukoganj</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward56.jsp">Ward 56</a></td>
+                        <td>Snehlata Ganj</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward57.jsp">Ward 57</a></td>
+                        <td>Devi Ahilyabai</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward58.jsp">Ward 58</a></td>
+                        <td>Netaji Subhash Chandra Bose</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward59.jsp">Ward 59</a></td>
+                        <td>Harsiddhi</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward60.jsp">Ward 60</a></td>
+                        <td>Ranipura</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward61.jsp">Ward 61</a></td>
+                        <td>Tatya Sarvate</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward62.jsp">Ward 62</a></td>
+                        <td>Raoji Bazaar</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward63.jsp">Ward 63</a></td>
+                        <td>Navlakha</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward64.jsp">Ward 64</a></td>
+                        <td>Chitawad</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward65.jsp">Ward 65</a></td>
+                        <td>Sant Kawar Ram</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Mward66.jsp">Ward 66</a></td>
+                        <td>Shaheed Hemu Kalani</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Mward67.jsp">Ward 67</a></td>
+                        <td>Maharaja Holkar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Mward68.jsp">Ward 68</a></td>
+                        <td>Bambai Bazaar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Mward69.jsp">Ward 69</a></td>
+                        <td>Jawahar Marg</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Mward70.jsp">Ward 70</a></td>
+                        <td>Loknayak Nagar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Mward71.jsp">Ward 71</a></td>
+                        <td>Dravid Nagar</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward72.jsp">Ward 72</a></td>
+                        <td>Lokmanya Nagar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Mward73.jsp">Ward 73</a></td>
+                        <td>Laxman Singh Chouhan</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Mward74.jsp">Ward 74</a></td>
+                        <td>Vishnupuri</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward75.jsp">Ward 75</a></td>
+                        <td>Palda</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward76.jsp">Ward 76</a></td>
+                        <td>Bicholi</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Mward77.jsp">Ward 77</a></td>
+                        <td>Bilawali</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward78.jsp">Ward 78</a></td>
+                        <td>Choithram</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward79.jsp">Ward 79</a></td>
+                        <td>Sukh Niwas 1</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward80.jsp">Ward 80</a></td>
+                        <td>Sukh Niwas 2</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward81.jsp">Ward 81</a></td>
+                        <td>Annapurna</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward82.jsp">Ward 82</a></td>
+                        <td>Sudama Nagar</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward83.jsp">Ward 83</a></td>
+                        <td>Gumasta Nagar</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward84.jsp">Ward 84</a></td>
+                        <td>Dwarkapuri</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Mward85.jsp">Ward 85</a></td>
+                        <td>Prajapat Nagar</td>
+                    </tr>
+                    
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+        
+         <div class="contain" id="women">
+        <h4 style="margin-top: -50px; font-size: 30px;">Welcome Women!</h4>
+        <div class="ward-table">
+            <h2>Wards of Indore Municipal Corporation</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ward Number</th>
+                        <th>Ward Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="Wward1.jsp">Ward 1</a></td>
+                        <td>Sirpur</td>
+                    </tr>
+                    <tr>
+                        <td><a href="Wward2.jsp">Ward 2</a></td>
+                        <td>Chandan Nagar</td>
+                    </tr>
+                     <tr>
+                        <td><a href="Wward3.jsp">Ward 3</a></td>
+                        <td>Kalani Nagar</td>
+                    </tr>
+                   <tr>
+                        <td><a href="Wward4.jsp">Ward 4</a></td>
+                        <td>Sukhdev Nagar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Wward5.jsp">Ward 5</a></td>
+                        <td>Raj Nagar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Wward6.jsp">Ward 6</a></td>
+                        <td>Malharganj</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Wward7.jsp">Ward 7</a></td>
+                        <td>Janta Colony</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Wward8.jsp">Ward 8</a></td>
+                        <td>Juna Risala</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Wward9.jsp">Ward 9</a></td>
+                        <td>Vrindavan</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Wward10.jsp">Ward 10</a></td>
+                        <td>Banganga</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Wward11.jsp">Ward 11</a></td>
+                        <td>Bhagirath Pura</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Wward12.jsp">Ward 12</a></td>
+                        <td>Govind Colony</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Wward13.jsp">Ward 13</a></td>
+                        <td>Sangam Nagar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Wward14.jsp">Ward 14</a></td>
+                        <td>Ashok Nagar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Wward15.jsp">Ward 15</a></td>
+                        <td>Bijasan</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Wward16.jsp">Ward 16</a></td>
+                        <td>Nandbagh</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Wward17.jsp">Ward 17</a></td>
+                        <td>Kushwah Nagar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Wward18.jsp">Ward 18</a></td>
+                        <td>Sant Kabir</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Wward19.jsp">Ward 19</a></td>
+                        <td>Vishwa Karma</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Wward20.jsp">Ward 20</a></td>
+                        <td>Gauri Nagar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Wward21.jsp">Ward 21</a></td>
+                        <td>Shyam Nagar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Wward22.jsp">Ward 22</a></td>
+                        <td>Pt. Deendayal Upadhyay</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Wward23.jsp">Ward 23</a></td>
+                        <td>Lt. Rajesh Joshi</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Wward24.jsp">Ward 24</a></td>
+                        <td>Baliji Nath Maharaj</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Wward25.jsp">Ward 25</a></td>
+                        <td>S-Nanda Nagar</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward26.jsp">Ward 26</a></td>
+                        <td>Geen Mata</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward27.jsp">Ward 27</a></td>
+                        <td>Pashupatinath</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward28.jsp">Ward 28</a></td>
+                        <td>Maa Tujla Bhawani</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward29.jsp">Ward 29</a></td>
+                        <td>Dr. Shyama Prasad Mukharji</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward30.jsp">Ward 30</a></td>
+                        <td>Sant Ravidas</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward31.jsp">Ward 31</a></td>
+                        <td>Maharaj Chhatrasal</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward32.jsp">Ward 32</a></td>
+                        <td>Atal Bihari Bajpai</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward33.jsp">Ward 33</a></td>
+                        <td>Sukhliya</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward34.jsp">Ward 34</a></td>
+                        <td>Shaheed Bhagat Singh</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward35.jsp">Ward 35</a></td>
+                        <td>Lasudiya Mori</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward36.jsp">Ward 36</a></td>
+                        <td>Nipaniya</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward37.jsp">Ward 37</a></td>
+                        <td>Sai krupa</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward38.jsp">Ward 38</a></td>
+                        <td>Haji Colony</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward39.jsp">Ward 39</a></td>
+                        <td>Nahar Shah Wali</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward40.jsp">Ward 40</a></td>
+                        <td>Khajarana Ganesh</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward41.jsp">Ward 41</a></td>
+                        <td>Kailash Puri</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward42.jsp">Ward 42</a></td>
+                        <td>Swami Vivekanand</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward43.jsp">Ward 43</a></td>
+                        <td>Srinagar</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward44.jsp">Ward 44</a></td>
+                        <td>Hig</td>
+                    </tr>
+                  
+                    <tr>
+                        <td><a href="Wward45.jsp">Ward 45</a></td>
+                        <td>Dr. BR Ambedkar</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward46.jsp">Ward 46</a></td>
+                        <td>Somnath</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward47.jsp">Ward 47</a></td>
+                        <td>Sardar Vallabh Bhai</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward48.jsp">Ward 48</a></td>
+                        <td>Geeta Bhawan</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward49.jsp">Ward 49</a></td>
+                        <td>Tilak Nagar</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward50.jsp">Ward 50</a></td>
+                        <td>Brajeshwari</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward51.jsp">Ward 51</a></td>
+                        <td>Bhagwati Nagar</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward52.jsp">Ward 52</a></td>
+                        <td>Musakhedi</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward53.jsp">Ward 53</a></td>
+                        <td>Dr. Molana Azad Nagar</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward54.jsp">Ward 54</a></td>
+                        <td>Residency</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward55.jsp">Ward 55</a></td>
+                        <td>South Tukoganj</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward56.jsp">Ward 56</a></td>
+                        <td>Snehlata Ganj</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward57.jsp">Ward 57</a></td>
+                        <td>Devi Ahilyabai</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward58.jsp">Ward 58</a></td>
+                        <td>Netaji Subhash Chandra Bose</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward59.jsp">Ward 59</a></td>
+                        <td>Harsiddhi</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward60.jsp">Ward 60</a></td>
+                        <td>Ranipura</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward61.jsp">Ward 61</a></td>
+                        <td>Tatya Sarvate</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward62.jsp">Ward 62</a></td>
+                        <td>Raoji Bazaar</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward63.jsp">Ward 63</a></td>
+                        <td>Navlakha</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward64.jsp">Ward 64</a></td>
+                        <td>Chitawad</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward65.jsp">Ward 65</a></td>
+                        <td>Sant Kawar Ram</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Wward66.jsp">Ward 66</a></td>
+                        <td>Shaheed Hemu Kalani</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Wward67.jsp">Ward 67</a></td>
+                        <td>Maharaja Holkar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Wward68.jsp">Ward 68</a></td>
+                        <td>Bambai Bazaar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Wward69.jsp">Ward 69</a></td>
+                        <td>Jawahar Marg</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Wward70.jsp">Ward 70</a></td>
+                        <td>Loknayak Nagar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Wward71.jsp">Ward 71</a></td>
+                        <td>Dravid Nagar</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward72.jsp">Ward 72</a></td>
+                        <td>Lokmanya Nagar</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Wward73.jsp">Ward 73</a></td>
+                        <td>Laxman Singh Chouhan</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Wward74.jsp">Ward 74</a></td>
+                        <td>Vishnupuri</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward75.jsp">Ward 75</a></td>
+                        <td>Palda</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward76.jsp">Ward 76</a></td>
+                        <td>Bicholi</td>
+                    </tr>
+                    
+                     <tr>
+                        <td><a href="Wward77.jsp">Ward 77</a></td>
+                        <td>Bilawali</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward78.jsp">Ward 78</a></td>
+                        <td>Choithram</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward79.jsp">Ward 79</a></td>
+                        <td>Sukh Niwas 1</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward80.jsp">Ward 80</a></td>
+                        <td>Sukh Niwas 2</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward81.jsp">Ward 81</a></td>
+                        <td>Annapurna</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward82.jsp">Ward 82</a></td>
+                        <td>Sudama Nagar</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward83.jsp">Ward 83</a></td>
+                        <td>Gumasta Nagar</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward84.jsp">Ward 84</a></td>
+                        <td>Dwarkapuri</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="Wward85.jsp">Ward 85</a></td>
+                        <td>Prajapat Nagar</td>
+                    </tr>
+                    
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </body>
+</html>
+    
